@@ -1,0 +1,14 @@
+class Pencil:
+    def __init__(self, length, price, brand):
+        self.length = length
+        self.price = price
+        self.brand = brand
+        
+    def __repr__(self):
+        return f"Student: {self.length}, Price: {self.price}, Brand: {self.brand}"
+
+Pencil1 = Pencil(25, 80, "Mongol")
+Pencil2 = Pencil(30, 90, "Fiber Castle")
+
+print(Pencil1)
+print(Pencil2)
