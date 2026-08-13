@@ -1,0 +1,20 @@
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+    
+    def __str__(self):
+        return f"{self.name}, (${self.price:.2f})"
+    
+    def __repr__(self):
+        return f"Product: {self.name!r}, (${self.price})"
+
+gadget = Product("Ipad", 599.99)
+
+        
+print(f"User view: {gadget}")
+print(f"Developer view: {repr(gadget)}")
+
+
+inventory = [gadget]
+print(f"Inventory view: {inventory}")
