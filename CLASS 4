@@ -1,0 +1,16 @@
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def show(self):
+        print("Name:", self.name, "Age:", self.age)
+        print()
+        
+print("First Student")
+zai = Student("Zai", 17)
+zai.show()
+
+print("Second Student")
+venice = Student("Venice", 16)
+venice.show()
