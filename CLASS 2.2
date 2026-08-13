@@ -1,0 +1,18 @@
+class Food:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+        
+    def __str__(self):
+        return f"{self.name}, (${self.price:.2f})"
+    
+    def __repr__(self):
+        return f"Food: {self.name!r}, (${self.price})"
+    
+Japanese_Food = Food('Ramen', 259.99)
+
+print(f"Customer View: {Japanese_Food}")
+print(f"Staff View: {repr(Japanese_Food)}")
+
+Owner = [Japanese_Food]
+print(f"Owner View: {Owner}")
