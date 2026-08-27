@@ -1,0 +1,28 @@
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+        self.is_read = False 
+
+    def __repr__(self):
+        return f'{self.title}, by {self.author}, {self.pages} pages, - Read: {self.is_read}'
+
+    def mark_as_read(self):
+        self.is_read = True
+        print(f'✅ You have finished reading')
+
+    def book_info(self):
+        print(f'📖 {self.title} has {self.pages} pages written by {self.author}')
+
+Book1 = Book("Python's Basics", "John Doe", 340)
+Book2 = Book("Learning OOP", "Guest 666", 770)
+Book3 = Book("Data Science 101", "Little Amy", 200)
+
+print(Book1)
+print(Book2)
+print(Book3)
+
+Book2.book_info()
+Book2.mark_as_read()
+print(Book2)
