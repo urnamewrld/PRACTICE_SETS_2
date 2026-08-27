@@ -1,0 +1,29 @@
+class Pet:
+    def __init__(self, name, animal_type, age):
+        self.name = name
+        self.animal_type = animal_type
+        self.age = age
+        self.is_hungry = True
+    
+    def __repr__(self):
+        return f'Pet name: {self.name}, Animal Type: {self.animal_type}, Age {self.age}, is hungry?: {self.is_hungry}'
+    
+    def feed(self):
+        self.is_hungry = False
+        print(f'🐶 {self.name} has been fed!')
+        
+    def sleep(self):
+        print(f'💤{self.name} is now sleeping...')
+
+
+pet1 = Pet("Brownie", "Mammal", 12)
+pet2 = Pet("Choco", "Mammal", 15)
+pet3 = Pet("Spikey", "Mammal", 16)
+
+print(pet1)
+print(pet2)
+print(pet3)
+
+pet2.sleep()
+pet3.feed()
+print(pet3)
