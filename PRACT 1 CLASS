@@ -1,0 +1,17 @@
+class Smarphones:
+    def __init__(self, brand, model, storage, price):
+        self.brand = brand
+        self.model = model
+        self.storage = storage
+        self.price = price 
+
+    def __repr__(self):
+        return f'{self.brand} {self.model}, {self.storage} --- {self.price}'
+
+phone1= Smarphones("Samsung", "S26", "256 GB", "₱49000")
+phone2= Smarphones("Apple", "iPhone 16", "500 GB", "₱102000")
+phone3= Smarphones("Vivo", "V50", "500 GB", "₱30000")
+
+print(phone1)
+print(phone2)
+print(phone3)
