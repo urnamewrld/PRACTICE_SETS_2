@@ -1,0 +1,14 @@
+class Product:
+
+    def __init__(self, name, category, price):
+        self.name = name
+        self.category = category
+        self.price = price
+
+product1 = Product("Ballpen", "School Supply", 12.00)
+product2 = Product("Washing Machine", "Electronics", 45000.00)
+product3 = Product("Chocolate", "Food", 50.00)
+
+print(f'Product: {product1.name}, Category: {product1.category}, Price: {product1.price}')
+print(f'Product: {product2.name}, Category: {product2.category}, Price: {product2.price}')
+print(f'Product: {product3.name}, Category: {product3.category}, Price: {product3.price}')
