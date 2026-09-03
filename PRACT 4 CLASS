@@ -1,0 +1,37 @@
+class Student:
+    def __init__(self, full_name, id_number, course, grade1, grade2):
+        self.full_name = full_name
+        self.id_number = id_number
+        self.course = course
+        self.grade1 = grade1
+        self.grade2 = grade2
+
+    def __repr__(self):
+        return f'Student({self.full_name}, {self.id_number}, {self.course})'
+
+    def get_average(self):
+        average = (self.grade1 + self.grade2) / 2 
+        return round(average, 2)
+
+    def show_status(self):
+        avg = self.get_average()
+        if avg >= 75:
+            print(f'Average: {avg} - Passed')
+        else:
+            print(f'Average: {avg} - Failed')
+
+S1 = Student("Zai Mae", "2025-505", "BSMT", 95, 97)
+S2 = Student("Divine Grace", "2023-493", "BSIT", 70, 78)
+S3 = Student("Thea April", "2020-234", "BSPT", 90, 93)
+
+print(S1)
+S1.show_status()
+print()
+
+print(S2)
+S2.show_status()
+print()
+
+print(S3)
+S3.show_status()
+print()
