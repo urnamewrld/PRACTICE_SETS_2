@@ -1,0 +1,26 @@
+class BankAccount:
+    def __init__(self, account_name, account_number):
+        self.account_name = account_name
+        self.account_number = account_number
+        self.balance = 0.0
+
+    def __repr__(self):
+        return f"Account: {self.account_name} | No. {self.account_number} | Balance: ₱{self.balance:.2f}"
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def show_balance(self):
+        print(f'Current Balance: ₱{self.balance:.2f}')
+
+acc1 = BankAccount("John Doe", "123456789")
+acc2 = BankAccount("Jane Smith", "987654321")
+
+acc1.deposit(1000)
+acc2.deposit(500)
+
+print(acc1)
+acc1.show_balance
+
+print(acc2)
+acc2.show_balance
