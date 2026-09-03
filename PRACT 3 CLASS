@@ -1,0 +1,20 @@
+class Book:
+    def __init__(self, title, author, ISBN):
+        self.title = title
+        self.author = author
+        self.ISBN = ISBN
+
+    def display_info(self):
+        print (f'Title: {self.title}, Author: {self.author}, ISBN: {self.ISBN}')
+
+    def __repr__(self):
+        return f'Book: {self.title}, {self.author}, {self.ISBN}'
+
+book1 = Book("Noli Me Tangere", "Jose Rizal", "978-123456")
+book2 = Book("Harry Potter", "J.K Rowling", "978-789012")
+
+book1.display_info()
+book2.display_info()
+
+print(book1)
+print(book2)
