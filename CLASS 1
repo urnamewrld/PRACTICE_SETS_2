@@ -5,7 +5,7 @@ class Pencil:
         self.brand = brand
         
     def __repr__(self):
-        return f"Student: {self.length}, Price: {self.price}, Brand: {self.brand}"
+        return f"Length: {self.length}, Price: {self.price}, Brand: {self.brand}"
 
 Pencil1 = Pencil(25, 80, "Mongol")
 Pencil2 = Pencil(30, 90, "Fiber Castle")
