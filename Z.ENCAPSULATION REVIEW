@@ -1,0 +1,23 @@
+class Car:
+    def __init__(self, name, speed):
+        self.name = name #this has a public attribute 
+        self.__speed = speed #single or double underscore means you private the attribute
+
+#setter method you change the value of the private attribute 
+    def set_speed(self, speed):
+        self.__speed = speed
+
+#getter method you return the value of the private attribute 
+    def get_speed(self):
+        return self.__speed
+
+#use specific/regular/instance method to manipulate the private 
+    def new_speed(self):
+        self.__speed = self.__speed + 25
+        return self.__speed
+
+car1 = Car("Toyota Fortuner", 60)
+car2 = Car("Toyota Veloz", 90)
+
+print(car1.new_speed())
+print(car2.new_speed())
