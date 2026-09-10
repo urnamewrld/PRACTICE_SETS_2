@@ -1,0 +1,36 @@
+class Car:
+    #Constructor method
+    def __init__(self, brand, model, year): #def is the def keyword, inside the parenthesis are the attributes 
+        #Dot notation
+        self.brand=brand
+        self.model=model
+        self.year=year
+
+ #behavior of the object is stop and drive
+#instance method/regular method
+    def drive(self):
+        print("The " +self.model+" is driving")
+                                                #you can use ++ or f"
+    def stop(self):
+        print(f"The {self.model} has stopped")
+
+    #to print the car1 and 2 use special mehthod 
+    def __str__(self):
+        return f"{self.brand}, {self.model}, {self.year}"
+
+
+#object
+car1=Car("Toyota", "Hilux", 2024)
+car2=Car("Mitsubishi", "Montero", 2025)
+
+#dot notation, the dot is the dot operator
+car1.drive()
+car2.stop()
+
+#call a function
+print(car1)
+print(car2)
+
+
+#special method are anything that has double underscore 
+#behavior is what the object does
