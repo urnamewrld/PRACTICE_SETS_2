@@ -1,0 +1,44 @@
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
+
+    def sleep(self):
+        print(f'{self.name} is sleeping')
+    def eat(self):
+        print(f'{self.name} is eating')
+
+class Dog(Animal):
+    def speak(self):
+        print("Woof")
+
+class Cat(Animal):
+    def speak(self):
+        print("Meow")
+
+class Bird(Animal):
+    def speak(self):
+        print("Chirp")
+
+dog = Dog("Brownie")
+cat = Cat("Choco")
+bird = Bird("Larry")
+
+print(dog.name)
+print(dog.is_alive)
+dog.eat()
+dog.sleep()
+dog.speak()
+print()
+print(cat.name)
+print(cat.is_alive)
+cat.eat()
+cat.sleep()
+cat.speak()
+print()
+print(bird.name)
+print(bird.is_alive)
+bird.eat()
+bird.sleep()
+bird.speak()
+print()
