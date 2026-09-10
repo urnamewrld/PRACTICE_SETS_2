@@ -1,7 +1,7 @@
 class Car:
     #Constructor method
     def __init__(self, brand, model, year): #def is the def keyword, inside the parentheses are the attributes 
-        #Dot notation
+        # Using dot notation to create instance variables
         self.brand=brand
         self.model=model
         self.year=year
@@ -37,3 +37,10 @@ print(car2)
 #behavior is what the object does
 #Instantiation allows you to reuse the same structure, the process of creating an individual, concrete object from a class blueprint
 #"object" and an "instance" refer to the exact same thing
+
+"""
+self.name is instance variable
+. is dot operator
+self.name=name is dot notation
+name is local variable
+"""
