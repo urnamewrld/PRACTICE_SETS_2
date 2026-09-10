@@ -1,0 +1,25 @@
+class Shape:
+    def __init__(self, width, length):
+        self.width = width 
+        self.length = length
+
+class Square(Shape):
+    def __init__(self, width, length):
+        super().__init__(width, length)
+
+    def area(self):
+        return self.length*self.width
+
+class Cube(Shape):
+    def __init__(self, width, length, height):
+        super().__init__(width, length)
+        self.height = height
+
+    def area(self):
+        return self.length*self.width*self.height
+
+square = Square(20, 20)
+cube = Cube(20, 15, 10)
+
+print(square.area())
+print(cube.area())
