@@ -1,0 +1,88 @@
+#The code needs revision and sometimes does'nt work properly 
+
+
+class Character: #Parent/Base Class
+    def __init__(self, health, speed, damage, armour):
+        self.health = health
+        self.speed = speed
+        self.damage = damage
+        self.armour = armour
+
+    def take_damage(self, amount):
+        self.health -= amount
+
+class Warrior(Character): #Child/Derived Class
+    def __init__(self, health, speed, damage, armour):
+        super().__init__(health, speed, damage, armour)
+        self.resistance = 0.40
+    def take_damage(self, amount):
+        modified_amount = amount * self.resistance
+        super().take_damage(modified_amount)
+
+class Mage(Character): #Child/Derived Class
+    def __init__(self, health, speed, damage, armour):
+        super().__init__(health, speed, damage, armour)
+        self.resistance = 0.20
+    def take_damage(self, amount):
+        modified_amount = amount * self.resistance
+        super().take_damage(modified_amount)
+
+class Tank(Character): #Child/Derived Class
+    def __init__(self, health, speed, damage, armour):
+        super().__init__(health, speed, damage, armour)
+        self.resistance = 0.70
+    def take_damage(self, amount):
+        modified_amount = amount * self.resistance
+        super().take_damage(modified_amount)
+
+class Ninja(Character): #Child/Derived Class
+    def __init__(self, health, speed, damage, armour):
+        super().__init__(health, speed, damage, armour)
+        self.resistance = 0.10
+    def take_damage(self, amount):
+        modified_amount = amount * self.resistance
+        super().take_damage(modified_amount)
+
+class Archer(Character): #Child/Derived Class
+    def __init__(self, health, speed, damage, armour):
+        super().__init__(health, speed, damage, armour)
+        self.resistance = 0
+    def take_damage(self, amount):
+        modified_amount = amount * self.resistance
+        super().take_damage(modified_amount)
+
+warrior = Warrior(100, 40, 60, 80)
+print(f'Initial Health: {warrior.health}')
+warrior.take_damage(50)
+print(f'Health after damage: {warrior.health}')
+print()
+mage = Mage(100, 40, 80, 0)
+print(f'Initial Health: {mage.health}')
+mage.take_damage(20)
+print(f'Health after damage: {mage.health}')
+print()
+tank = Tank(100, 30, 20, 100)
+print(f'Initial Health: {tank.health}')
+tank.take_damage(80)
+print(f'Health after damage: {tank.health}')
+print()
+ninja = Ninja(100, 90, 50, 20)
+print(f'Initial Health: {ninja.health}')
+ninja.take_damage(40)
+print(f'Health after damage: {ninja.health}')
+print()
+archer = Archer(100, 60, 80, 0)
+print(f'Initial Health: {archer.health}')
+archer.take_damage(70)
+print(f'Health after damage: {archer.health}')
+print()
+
+
+#Inheritance allows a class to inherit attrivutes and methods from another class
+#Helps with code reusability and extensibility
+
+#super() used inside of a dunder method, this function give access to the method of a parent class
+#it returns temporary object of a parent class when used 
+
+#Method Overriding - Child defines method with same name as parent → replaces parent behavior.
+#Extending - Child adds brand new methods parent doesn't have.
