@@ -1,6 +1,6 @@
 class Car:
     #Constructor method
-    def __init__(self, brand, model, year): #def is the def keyword, inside the parenthesis are the attributes 
+    def __init__(self, brand, model, year): #def is the def keyword, inside the parentheses are the attributes 
         #Dot notation
         self.brand=brand
         self.model=model
