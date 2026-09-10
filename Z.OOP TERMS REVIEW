@@ -36,3 +36,4 @@ print(car2)
 #special method are anything that has double underscore 
 #behavior is what the object does
 #Instantiation allows you to reuse the same structure, the process of creating an individual, concrete object from a class blueprint
+#"object" and an "instance" refer to the exact same thing
