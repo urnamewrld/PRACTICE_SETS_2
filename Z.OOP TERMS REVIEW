@@ -8,7 +8,7 @@ class Car:
 
 #Instantiation allows you to reuse the same structure 
 #behavior of the object is stop and drive
-#instance method/regular method
+#instance method/regular method/specific method
     def drive(self):
         print("The " +self.model+" is driving")
                                                 #you can use ++ or f"
