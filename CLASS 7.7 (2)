@@ -1,0 +1,16 @@
+class Vehicle:
+    def __init__(self, color, name):
+        self.color = color 
+        self.name = name 
+
+    def info(self):
+        print(self.color, self.name)
+
+class Car(Vehicle):
+    def change_gear(self, no):
+        print(self.name, 'change gear to number', no)
+
+car1 = Car("Red", "Toyota GR Supra")
+
+car1.info()
+car1.change_gear(5)
