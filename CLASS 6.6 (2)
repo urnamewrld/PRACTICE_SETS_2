@@ -1,0 +1,29 @@
+class Book:
+    def __init__(self, title, quantity, author, price):
+        self.title = title
+        self.quantity = quantity
+        self.author = author
+        self.__price = price
+        self.__discount = None
+
+    def set_discount(self, discount):
+        self.__discount = discount 
+
+    def get_price(self):
+        if self.__discount:
+            return self.__price * (1-self.__discount)
+        return self.__price
+
+    def __repr__ (self):
+        return f"Book: {self.title}, Quantity: {self.quantity}, Author: {self.author}, Price: {self.get_price()}"
+
+book1 = Book("To Kill a Mockingbird", 1, "Harpee Lee", 129.99)
+buy_bulk_books = Book("To Kill a Mockingbird", 30, "Harpee Lee", 129.99)
+buy_bulk_books.set_discount(0.20)
+
+print(book1.get_price())
+print(buy_bulk_books.get_price())
+print()
+print(book1)
+print(buy_bulk_books)
+
