@@ -6,7 +6,8 @@ class Car:
         self.model=model
         self.year=year
 
- #behavior of the object is stop and drive
+#Instantiation allows you to reuse the same structure 
+#behavior of the object is stop and drive
 #instance method/regular method
     def drive(self):
         print("The " +self.model+" is driving")
@@ -31,6 +32,7 @@ car2.stop()
 print(car1)
 print(car2)
 
-
+#Note:
 #special method are anything that has double underscore 
 #behavior is what the object does
+#Instantiation allows you to reuse the same structure, the process of creating an individual, concrete object from a class blueprint
