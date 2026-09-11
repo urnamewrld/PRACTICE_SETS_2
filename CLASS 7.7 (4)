@@ -1,0 +1,28 @@
+"""
+Create a class 
+Class name should be person 
+Attributes are First name and Last name
+Create a Method 
+Method name should be print name 
+Create a child class 
+Child class name is student 
+Under child class create a method, name of method is welcome 
+In welcome method it should print 
+Inside welcome is the string welcome to class 2026
+create a one object for a child class
+no output 
+"""
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def print_name(self):
+        print({self.first_name, self.last_name})
+
+class Student(Person):
+    def welcome(self):
+        print("Welcome to Class 2026!")
+
+student1 = Student("First Name", "Last Name")
