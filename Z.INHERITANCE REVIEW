@@ -1,4 +1,4 @@
-#The code needs revision and sometimes does'nt work properly 
+#The code needs revision and sometimes doesn't work properly 
 
 
 class Character: #Parent/Base Class
