@@ -1,0 +1,27 @@
+'''
+Create a class
+Name of the class is gadget
+Initialize the attributes of gadget class
+Attributes: type, brand, stock, price
+special method print the object representation the will return to string format
+create 2 objects 
+print those 2
+'''
+
+class Gadget:
+    def __init__ (self, type, brand, stock, price):
+        self.type = type
+        self.brand = brand
+        self.stock = stock
+        self.price = price 
+    
+    def __str__(self):
+        return f' Type: {self.type}, Brand: {self.brand}, Stock: {self.stock}, Price: {self.price}'
+        
+gadget1 = Gadget("Smartphone", "Apple", 30, 199.90)
+gadget2 = Gadget("Smartwatch", "Samsung", 5, 59.90)
+
+print(gadget1)
+print(gadget2)
+    
+        
