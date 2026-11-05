@@ -1,0 +1,16 @@
+class Guitar:
+    def play(self):
+        print("Strumming the guitar")
+
+class Piano:
+    def play(slef):
+        print("Playing the piano")
+
+def play_instrument(self):
+    self.play()
+
+acoustic = Guitar()
+grand = Piano()
+
+play_instrument(acoustic)
+play_instrument(grand)
