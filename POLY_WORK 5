@@ -1,0 +1,19 @@
+class Vehicle:
+    def __init__(self, name, color, price):
+        self.name = name
+        self.color = color
+        self.price = price
+    def show(self):
+        print(self.name, self.color, self.price)
+    def max_speed(self):
+        print('vehicle max speed is 200')
+class Car(Vehicle):
+    def show(self):
+        print(self.name, self.color, self.price)
+    def max_speed(self):
+        print("vehicle max speed is 300")
+c = Car('Ford Everest', 'Silver', 4000)
+c.show()
+c.max_speed()
+v = Car('Toyota Hilux', 'White', 40000)
+v.max_speed()
