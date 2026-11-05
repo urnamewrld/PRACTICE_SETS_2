@@ -1,0 +1,44 @@
+#Base class
+class Shape:
+    pass #placeholder method
+
+#Child class 1
+class Square(Shape):
+    def __init__(self, side):
+        self.side = side
+
+    def calculate_perimeter(self):
+        return 4 * self.side
+
+#Child class 2
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.lenth = length
+        self.width = width 
+
+    def calculate_perimeter(self):
+        return (2 * self.lenth) + (2 * self.width)
+
+#Child class 3
+class Trinagle(Shape):
+    def __init__(self, side_1, side_2, side_3):
+        self.side_1 = side_1
+        self.side_2 = side_2
+        self.side_3 = side_3
+
+    def calculate_perimeter(self):
+            return self.side_1 + self.side_2 + self.side_3
+
+#polymorphic function
+def print_perimeter(shape):
+    perimeter = shape.calculate_perimeter()
+    print (f'The perimeter of this shape is: {perimeter}')
+
+#test the code
+square = Square (6)
+rectangle = Rectangle (6,7)
+tringle = Trinagle (13,11,3)
+
+print_perimeter(square)
+print_perimeter(rectangle)
+print_perimeter(tringle)
